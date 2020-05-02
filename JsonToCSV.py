@@ -24,7 +24,6 @@ print ('Type of Data :', datatype)
 # Opening JSON file and loading the data
 # into the variable data
 
-
 with open(jsonfile) as json_file:
     data = json.load(json_file)
     json_data = data[datatype]
@@ -50,7 +49,9 @@ with open(jsonfile) as json_file:
             #Writing data of CSV file
             csv_writer.writerow(csvline.values())
 
+        #close csv file
         csv_file.close()
 
+    #close json file
     json_file.close()
 
